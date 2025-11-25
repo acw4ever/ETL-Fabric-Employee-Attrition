@@ -4,14 +4,16 @@ This project builds a Microsoft Fabric data pipeline to automate ingestion and t
 Purpose: Build an automated, maintainable data pipeline in Microsoft Fabric to ingest two primary sources—email reports (Outlook) and local HR system extracts—and perform standardized transformations so downstream analytics and reports are delivered faster and with consistent quality. Primary benefit: reduce manual effort and end-to-end processing time while improving traceability and repeatability.
 
 ## Architecture
-Insert or link to a diagram showing the ETL workflow (can be a PNG/JPG/Markdown diagram).
-
+![Project Architecture](Taskflow.png)
 ## Technologies Used
-- Python (pandas, sqlalchemy)
-- PostgreSQL
-- Docker (optional)
-- Airflow (optional)
-- [Any other relevant tools]
+- Power Automate flow (Cloud, Automated)
+- Outlook
+- Excel Online and Desktop
+- Microsoft Fabric
+- On Premises Sql Server and SSMS
+- Integration Services
+- Power BI Desktop
+- Power BI Services
 
 ## Pipeline Steps
 
