@@ -38,9 +38,8 @@ All incoming files are centralized in SharePoint to provide a single staging loc
 The automated Outlook ingestion reduces manual steps; HR system extracts remain a manual step but follow the same landing pattern for downstream processing.
 
 ### 2. Transform
-### Transform
 
-The transformation stage is implemented in Microsoft Fabric and centers on a Fabric data warehouse that contains multiple staging and curated tables. **Dataflows**, **SQL scripts**, and **stored procedures** are used to import, parse, normalize, deduplicate, and enrich incoming rows. Automated validation detects missing or inconsistent values and routes those records to a review queue for manual inspection and correction. Once records pass validation, the cleaned data is loaded into the target **SQL Server** tables for downstream reporting and analytics.
+The transformation stage is implemented in Microsoft Fabric and centers on a Fabric data warehouse that contains multiple staging and curated tables. **Dataflows**, **SQL scripts**, and **stored procedures** are used to import, parse, normalize, deduplicate, and enrich incoming rows. Automated validation detects missing or inconsistent values and routes those records to a review queue for manual inspection and correction. Once records pass validation, the cleaned data is loaded into the target **SQL Server** tables for downstream reporting.
 
 **Key components**  
 - **Data warehouse:** staging and curated schemas for traceability.  
@@ -53,29 +52,21 @@ The transformation stage is implemented in Microsoft Fabric and centers on a Fab
 
 
 ### 3. Load
-Explain where the transformed data goes.  
-Example:  
-Loads cleaned data into `sales_data` table in PostgreSQL.
+Once records have been validated and approved, the cleaned data is moved from Microsoft Fabric into the target SQL Server table tbl_LatamrostersB using an SSIS package developed in Visual Studio.
+
+![LOAD SQL TABLE](sqlTable.bmp)
 
 ## How to Run
 
-1. Clone the repo:-
-    ```
-    git clone https://github.com/yourusername/etl-sales-pipeline.git
-    cd etl-sales-pipeline
-    ```
+1. Review if powerautomate flow run correctly:-
+     
+2. Extrac Successfactor Reports and uploaded in sharepoint library :
+    
+3. go to workspace in microsoft fabric and open the datapipeline named IngestingrawdataM4_SF and hit on run action.
 
-2. Install dependencies:
-    ```
-    pip install -r requirements.txt
-    ```
-
-3. Set up database connection settings in `config.yaml` or environment variables.
-
-4. Run the ETL script:
-    ```
-    python etl_pipeline.py
-    ```
+5. Run the SSIS package:
+ 
+![Pipeline](PipeLineaction.bmp)
 
 ## Project Structure
 ```
