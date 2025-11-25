@@ -59,7 +59,7 @@ Loads cleaned data into `sales_data` table in PostgreSQL.
 
 ## How to Run
 
-1. Clone the repo:
+1. Clone the repo:-
     ```
     git clone https://github.com/yourusername/etl-sales-pipeline.git
     cd etl-sales-pipeline
