@@ -18,11 +18,25 @@ Purpose: Build an automated, maintainable data pipeline in Microsoft Fabric to i
 ## Pipeline Steps
 
 ### 1. Extract
-Explain how data is collected.  
-Example:  
-Extracts raw data from `data/sales.csv`.
+1.1 Data is ingested from two primary sources, both delivered in Excel format and landed in a SharePoint document library for downstream processing.
+
+
+First source — Outlook attachments Two Excel workbooks, Active headcount and Attrition report, are received as attachments in Outlook email messages. A Power Automate flow automatically downloads these attachments and uploads them to a designated SharePoint document library, eliminating manual intervention.
+### Power Automate Sample
+![Power Automate Flow](PowerAutomateFlow.bmp)
+
+Second source — Local HR system exports Two reports exported from the local HR system — All associate data and Termination report — are produced manually and then uploaded to the same SharePoint document library for consistency with the Outlook-sourced files.
+
+Notes
+
+All incoming files are centralized in SharePoint to provide a single staging location for validation and transformation.
+
+The automated Outlook ingestion reduces manual steps; HR system extracts remain a manual step but follow the same landing pattern for downstream processing.
 
 ### 2. Transform
+
+
+
 Describe cleaning, logic, and transformation steps.  
 Example:  
 - Removes duplicates  
