@@ -69,14 +69,7 @@ Once records have been validated and approved, the cleaned data is moved from Mi
 ![Pipeline](PipeLineaction.bmp)
 
 ## Project Structure
-```
-![overview](
-
-## Testing
-Describe how to run tests:
-```
-pytest tests/
-```
+![overview](overview.bmp)
 
 ## License
 [MIT License] or other as appropriate.
