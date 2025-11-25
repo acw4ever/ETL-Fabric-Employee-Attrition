@@ -70,18 +70,7 @@ Once records have been validated and approved, the cleaned data is moved from Mi
 
 ## Project Structure
 ```
-etl-sales-pipeline/
-├── data/
-│   └── sales.csv
-├── etl_pipeline.py
-├── requirements.txt
-├── config.yaml
-├── tests/
-│   └── test_transform.py
-├── docs/
-│   └── architecture.png
-└── README.md
-```
+![overview](
 
 ## Testing
 Describe how to run tests:
